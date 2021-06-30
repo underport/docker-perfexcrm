@@ -3,7 +3,7 @@ version: '3'
 services:
   perfex:
     container_name: crm
-    image: crm-docker:vb1.0
+    image: pkecastillo/crm-docker:v1.0
     depends_on:
       - mysql
     ports:
