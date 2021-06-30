@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  perfex:
+    container_name: crm
+    image: crm-docker:vb1.0
+    depends_on:
+      - mysql
+    ports:
+      - "8088:80"
+    volumes:
+      - crm_data:/var/www/html:rw
+volumes:
+  crm_data: 
+    driver: local
